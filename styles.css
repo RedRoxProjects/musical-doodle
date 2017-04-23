@@ -1,0 +1,19 @@
+body {
+    background-image: url('dog.jpg');
+    background-size: scale();
+    font-family: 'Titillium Web', sans-serif;
+    color: black;
+    margin-left: 60px;
+}
+
+
+.list {
+    display: inline-block;
+    position: relative;
+    padding-right: 1em;
+}
+
+canvas {
+    margin: 50px;
+    display: block;
+}

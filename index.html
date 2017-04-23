@@ -2,32 +2,61 @@
 <html>
 
 <head> 
-<title>Musical Doodle</title>
-<script src="//js.leapmotion.com/leap-0.6.3.js"></script>
-<script src="script.js"></script>
+	<title>Musical Doodle</title>
+	<script type="text/javascript" src="//js.leapmotion.com/leap-0.6.3.js"></script>
+	<script type="text/javascript" src="p5.js"></script>
+	<script type="text/javascript" src="p5.dom.js"></script>
+	<script type="text/javascript" src="maxiLib.js"></script>
+	<script type="text/javascript" src="maxiExtras.js"></script>
+	<link rel = "stylesheet" href = "styles.css">
+	<link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
 </head>
 
 <body>
-<h1>Musical Doodle</h1>
+	<h1>MUSICAL DOODLE</h1>
 
-<div id="intro">
-<p>This is a musical doodle web app that uses the gestures tracked by the Leap Motion to control sound. </p>
+	<div id="intro">
+		<p>This is a musical doodle web app that uses the gestures tracked by the Leap Motion to control sound. </p>
 
-<p>To use the app do the following:
-<ul>
-<li>Choose how you would like to track your hand gestures</li>
-<li>Choose what movement type you like to use to control the sounds</li>
-<li>Choose the audio effect you would like to use</li>
-</ul>
+		<!-- <p>To use the app do the following:
+			<ul>
+				<li>Choose how you would like to track your hand gestures</li>
+				<li>Choose what movement type you like to use to control the sounds</li>
+				<li>Choose the audio effect you would like to use</li>
+				<li>Hit the start button</li>
+			</ul>
+ -->
+	</div>
 
-</div>
+	<div id="selectors">
+		<div class="list o-tracking">
+			<h2>Tracking</h2>
+			<input type="radio" name="tracking" value="palm"> Palm <br>
+			<input type="radio" name="tracking" value="finger"> Finger Points <br>
+			<input type="radio" name="tracking" value="object"> Object
+		</div>
+		<div class="list o-movement">
+			<h2>Movement Mode</h2>
+			<input type="radio" name="movement" value="distance"> Distance <br>
+			<input type="radio" name="movement" value="speed"> Speed <br>
+			<input type="radio" name="movement" value="rotation"> Rotation
+		</div>
+		<div class="list o-effect">
+			<h2>Audio Effect</h2>
+			<input type="radio" name="effect" value="lpass" id="lowPass"> Low Pass Filter <br>
+			<input type="radio" name="effect" value="pitch" id="pitchShift"> Pitch Shift<br>
+			<input type="radio" name="effect" value="time" id="timeShift"> Time Shift
+		</div>
+	</div>
 
-<div id="selector">
-</div>
+	<div id="sketch-holder">
+	<!--P5 AUDIO SKETCH -->
+	</div>
 
-<footer>
+	<footer>
 
-</footer>
+	</footer>
 
+<script type="text/javascript" src="script.js"></script>
 </body>
 </html>
